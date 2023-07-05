@@ -1,9 +1,11 @@
 require("express-async-errors")
 
 const express = require('express');
-const lists = require('./routes/lists.routes')
+const lists = require('./routes')
+const cors = require("cors")
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 
 app.use(lists)

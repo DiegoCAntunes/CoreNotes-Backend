@@ -11,7 +11,7 @@ class ListsController{
             isFavorite
         })
 
-        return response.json()
+        return response.status(201).json()
     }
 
     async update(request, response){
